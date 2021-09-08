@@ -1,4 +1,4 @@
-# GatherJS
+# GatherJS (Release Candidate)
 
 [![created by](https://img.shields.io/badge/created%20by-Waren%20Gonzaga-blue.svg?longCache=true&style=flat-square)](https://github.com/warengonzaga) [![Release](https://img.shields.io/github/release/warengonzaga/gather.js.svg?style=flat-square)](https://github.com/warengonzaga/gather.js/releases) [![Star](https://img.shields.io/github/stars/warengonzaga/gather.js.svg?style=flat-square)](https://github.com/warengonzaga/gather.js/stargazers) [![License](https://img.shields.io/github/license/warengonzaga/gather.js.svg?style=flat-square)](https://github.com/warengonzaga/gather.js/blob/main/LICENSE)
 
