@@ -1,6 +1,6 @@
-# GatherJS (Release Candidate)
+# GatherJS (Unofficial)
 
-[![created by](https://img.shields.io/badge/created%20by-Waren%20Gonzaga-blue.svg?longCache=true&style=flat-square)](https://github.com/warengonzaga) [![Release](https://img.shields.io/github/release/warengonzaga/gather.js.svg?style=flat-square)](https://github.com/warengonzaga/gather.js/releases) [![Star](https://img.shields.io/github/stars/warengonzaga/gather.js.svg?style=flat-square)](https://github.com/warengonzaga/gather.js/stargazers) [![License](https://img.shields.io/github/license/warengonzaga/gather.js.svg?style=flat-square)](https://github.com/warengonzaga/gather.js/blob/main/LICENSE)
+[![created by](https://img.shields.io/badge/created%20by-Waren%20Gonzaga-blue.svg?longCache=true&style=flat-square)](https://github.com/warengonzaga) [![discord](https://img.shields.io/discord/659684980137656340?color=%235865F2&label=discord&logo=discord&logoColor=white&style=flat-square)](https://wrngnz.ga/discord) [![release](https://img.shields.io/github/release/warengonzaga/gather.js.svg?style=flat-square)](https://github.com/warengonzaga/gather.js/releases) [![star](https://img.shields.io/github/stars/warengonzaga/gather.js.svg?style=flat-square)](https://github.com/warengonzaga/gather.js/stargazers) [![license](https://img.shields.io/github/license/warengonzaga/gather.js.svg?style=flat-square)](https://github.com/warengonzaga/gather.js/blob/main/license)
 
 A simple and lightweight but powerful Node.js client for Gather API.
 
