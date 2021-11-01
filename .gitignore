@@ -4,6 +4,9 @@
 # node
 node_modules
 
+# parcel
+.parcel-cache
+
 # misc
 *.js
 !src/*.js
