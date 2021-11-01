@@ -6,5 +6,7 @@ node_modules
 
 # misc
 *.js
+!src/*.js
+!dist/*.js
 *.json
 *.http
