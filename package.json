@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/WarenGonzaga/gather.js/issues"
   },
-  "homepage": "https://github.com/WarenGonzaga/gather.js#readme"
+  "homepage": "https://github.com/WarenGonzaga/gather.js#readme",
+  "dependencies": {
+    "axios": "^0.24.0"
+  }
 }
