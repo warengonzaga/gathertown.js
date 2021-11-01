@@ -1,10 +1,10 @@
-# 🎯 Contributing to GatherJS
+# 🎯 Contributing to GatherTownJS
 
 Any contributions are welcome, encouraged, and valued. See the following information below for different ways to help and details about how this project handles them. Please make sure to read the relevant section before making your contribution. It will make it a lot easier for me as maintainer and smooth out the experience for all involved. The community looks forward to your contributions. 🎉✌✨
 
 ## 📋 Code of Conduct
 
-This project and everyone participating in it is governed by the GatherJS [Code of Conduct](https://github.com/warengonzaga/gather.js/blob/master/code_of_conduct.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to <opensource@warengonzaga.com>.
+This project and everyone participating in it is governed by the GatherTownJS [Code of Conduct](https://github.com/warengonzaga/gathertown.js/blob/master/code_of_conduct.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to <opensource@warengonzaga.com>.
 
 ## 💖 How to Contribute
 
@@ -20,7 +20,7 @@ If you can write a code then create a pull request to this repo and I will revie
 
 ### 🧰 Support
 
-Answering a question in [Discussions](https://github.com/warengonzaga/gather.js/discussions) is one of the easiest ways to start contributing.
+Answering a question in [Discussions](https://github.com/warengonzaga/gathertown.js/discussions) is one of the easiest ways to start contributing.
 
 ### 🐞 Reporting Bugs
 

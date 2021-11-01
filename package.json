@@ -1,6 +1,6 @@
 {
-  "name": "gather.js",
-  "version": "1.0.0-rc.1",
+  "name": "gathertown.js",
+  "version": "1.0.0-rc.1.1",
   "description": "A simple and lightweight but powerful NodeJS client for Gather Town API.",
   "source": "src/index.js",
   "main": "dist/gather.js",

@@ -1,6 +1,6 @@
-# GatherJS (Unofficial)
+# GatherTownJS (Unofficial)
 
-[![created by](https://img.shields.io/badge/created%20by-Waren%20Gonzaga-blue.svg?longCache=true&style=flat-square)](https://github.com/warengonzaga) [![discord](https://img.shields.io/discord/659684980137656340?color=%235865F2&label=discord&logo=discord&logoColor=white&style=flat-square)](https://wrngnz.ga/discord) [![release](https://img.shields.io/github/release/warengonzaga/gather.js.svg?style=flat-square)](https://github.com/warengonzaga/gather.js/releases) [![star](https://img.shields.io/github/stars/warengonzaga/gather.js.svg?style=flat-square)](https://github.com/warengonzaga/gather.js/stargazers) [![license](https://img.shields.io/github/license/warengonzaga/gather.js.svg?style=flat-square)](https://github.com/warengonzaga/gather.js/blob/main/license)
+[![created by](https://img.shields.io/badge/created%20by-Waren%20Gonzaga-blue.svg?longCache=true&style=flat-square)](https://github.com/warengonzaga) [![discord](https://img.shields.io/discord/659684980137656340?color=%235865F2&label=discord&logo=discord&logoColor=white&style=flat-square)](https://wrngnz.ga/discord) [![release](https://img.shields.io/github/release/warengonzaga/gathertown.js.svg?style=flat-square)](https://github.com/warengonzaga/gathertown.js/releases) [![star](https://img.shields.io/github/stars/warengonzaga/gathertown.js.svg?style=flat-square)](https://github.com/warengonzaga/gathertown.js/stargazers) [![license](https://img.shields.io/github/license/warengonzaga/gathertown.js.svg?style=flat-square)](https://github.com/warengonzaga/gathertown.js/blob/main/license)
 
 📢 Nominate ([@WarenGonzaga](https://warengonzaga.com)) as **[GitHub Star](https://stars.github.com/nominate)**. If you appreciate his hardwork and dedication to open source.
 
@@ -21,20 +21,20 @@ Currently supports **HTTP API** ``GET`` requests.
 - ``GET getMap()``
 - ``GET getEmailGuestList()``
 
-> NOTE: Currently working on Websocket API support as suggested by the team at Gather. Check out the discussion here: [#10](https://github.com/WarenGonzaga/gather.js/issues/10) and [#11](https://github.com/WarenGonzaga/gather.js/issues/11).
+> NOTE: Currently working on Websocket API support as suggested by the team at Gather. Check out the discussion here: [#10](https://github.com/WarenGonzaga/gathertown.js/issues/10) and [#11](https://github.com/WarenGonzaga/gathertown.js/issues/11).
 
 ## 📖 Documentation
 
 The complete documentation can be found here:
 
-[![docs](https://img.shields.io/badge/Docs-docs.warengonzaga.com/gatherjs-blue.svg?longCache=true&style=for-the-badge)](https://docs.warengonzaga.com/gatherjs)
+[![docs](https://img.shields.io/badge/Docs-docs.warengonzaga.com/gathertownjs-blue.svg?longCache=true&style=for-the-badge)](https://docs.warengonzaga.com/gathertownjs)
 
 ## 🕹️ Usage
 
-Example usage of the GatherJS.
+Example usage of the GatherTownJS.
 
 ```js
-const GATHER = require('gather.js'); // add gather package
+const GATHER = require('gathertown.js'); // add gather package
 const access = require('./config.json'); // load your apikey
 const gather = new GATHER(access.key); // access keys
 
@@ -57,11 +57,11 @@ Contributions are welcome, create a pull request to this repo and I will review 
 
 ## 💬 Discussions
 
-For any questions, suggestions, ideas, or simply you want to share your experience in using this project, feel free to share and discuss it to the [community](https://github.com/warengonzaga/gather.js/discussions)!
+For any questions, suggestions, ideas, or simply you want to share your experience in using this project, feel free to share and discuss it to the [community](https://github.com/warengonzaga/gathertown.js/discussions)!
 
 ## 🐛 Issues
 
-If you're facing a problem in using GatherJS please let me know by [creating an issue here](https://github.com/warengonzaga/gather.js/issues/new). I'm here to help you!
+If you're facing a problem in using GatherTownJS please let me know by [creating an issue here](https://github.com/warengonzaga/gathertown.js/issues/new). I'm here to help you!
 
 ## 🍀 Sponsors and Supporters
 
@@ -83,11 +83,11 @@ Read the project's [code of conduct](./code_of_conduct.md).
 
 ## 📃 License
 
-GatherJS is licensed under [The MIT License](https://opensource.org/licenses/MIT).
+GatherTownJS is licensed under [The MIT License](https://opensource.org/licenses/MIT).
 
 ## 📝 Author
 
-GatherJS is created by **[Waren Gonzaga](https://github.com/warengonzaga)**, with the help of awesome [contributors](https://github.com/warengonzaga/gather.js/graphs/contributors).
+GatherTownJS is created by **[Waren Gonzaga](https://github.com/warengonzaga)**, with the help of awesome [contributors](https://github.com/warengonzaga/gathertown.js/graphs/contributors).
 
 ---
 
