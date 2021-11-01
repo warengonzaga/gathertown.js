@@ -6,7 +6,7 @@
 
 ---
 
-A simple and lightweight but powerful Node.js client for [Gather Town](http://gather.town) API.
+A simple and lightweight but powerful NodeJS client for [Gather Town](http://gather.town) API.
 
 ## 😎 Demo
 
