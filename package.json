@@ -1,0 +1,26 @@
+{
+  "name": "gather.js",
+  "version": "1.0.0-rc.1",
+  "description": "A simple and lightweight but powerful NodeJS client for Gather Town API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WarenGonzaga/gather.js.git"
+  },
+  "keywords": [
+    "gather",
+    "nodejs",
+    "api",
+    "wrapper",
+    "client"
+  ],
+  "author": "Waren Gonzaga",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WarenGonzaga/gather.js/issues"
+  },
+  "homepage": "https://github.com/WarenGonzaga/gather.js#readme"
+}
