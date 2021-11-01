@@ -2,13 +2,15 @@
   "name": "gather.js",
   "version": "1.0.0-rc.1",
   "description": "A simple and lightweight but powerful NodeJS client for Gather Town API.",
-  "main": "index.js",
+  "source": "src/index.js",
+  "main": "dist/gather.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "parcel watch",
+    "build": "parcel build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WarenGonzaga/gather.js.git"
+    "url": "git+https://github.com/warengonzaga/gather.js.git"
   },
   "keywords": [
     "gather",
@@ -20,10 +22,19 @@
   "author": "Waren Gonzaga",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/WarenGonzaga/gather.js/issues"
+    "url": "https://github.com/warengonzaga/gather.js/issues"
   },
-  "homepage": "https://github.com/WarenGonzaga/gather.js#readme",
+  "homepage": "https://github.com/warengonzaga/gather.js#readme",
   "dependencies": {
     "axios": "^0.24.0"
-  }
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "dist/*"
+  ]
 }
