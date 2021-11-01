@@ -6,18 +6,23 @@ class GATHER {
     }
 
     getMap(spaceID, mapID) {
-        return this._sendRequest('getMap'+'?spaceId='+spaceID+'&mapId='+mapID+'&apiKey='+this.apiKey);
+        let space = '?spaceId='+spaceID;
+        let map = '&mapId='+mapID;
+        let apiKey = '&apiKey='+this.apiKey;
+        return this._sendRequest('getMap'+space+map+apiKey);
     }
 
     getEmailGuestList(spaceID) {
-        return this._sendRequest('getEmailGuestlist'+'?spaceId='+spaceID+'&apiKey='+this.apiKey);
+        let space = '?spaceId='+spaceID;
+        let apiKey = '&apiKey='+this.apiKey;
+        return this._sendRequest('getEmailGuestlist'+space+apiKey);
     }
 
     async _sendRequest(path) {
         try {
             const res = await requester.get(path, {
                 validateStatus: function (status) {
-                    return status >= 200 && status < 300; // default
+                    return status >= 200 && status < 300;
                 }
             });
             return res.data;
