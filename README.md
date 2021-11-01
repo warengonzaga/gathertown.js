@@ -14,7 +14,14 @@ A simple and lightweight but powerful NodeJS client for [Gather Town](http://gat
 
 ## ⚡ Features
 
-(coming soon)
+Currently supports **HTTP API** ``GET`` requests.
+
+### HTTP API
+
+- ``GET getMap()``
+- ``GET getEmailGuestList()``
+
+> NOTE: Currently working on Websocket API support as suggested by the team at Gather. Check out the discussion here: [#10](https://github.com/WarenGonzaga/gather.js/issues/10) and [#11](https://github.com/WarenGonzaga/gather.js/issues/11).
 
 ## 📖 Documentation
 
@@ -24,7 +31,25 @@ The complete documentation can be found here:
 
 ## 🕹️ Usage
 
-(coming soon)
+Example usage of the GatherJS.
+
+```js
+const GATHER = require('gather.js'); // add gather package
+const access = require('./config.json'); // load your apikey
+const gather = new GATHER(access.key); // access keys
+
+// some variables
+const spaceID = 'space-id\\space-name';
+const mapID = 'map-name';
+
+function map() {
+    gather.getMap(spaceID, mapID)
+        .then(data => console.log(data))
+        .catch(err => console.log(err));
+}
+
+map();
+```
 
 ## 🎯 Contributing
 
@@ -58,7 +83,7 @@ Read the project's [code of conduct](./code_of_conduct.md).
 
 ## 📃 License
 
-GatherJS is licensed under [GNU General Public License v3](https://opensource.org/licenses/GPL-3.0).
+GatherJS is licensed under [The MIT License](https://opensource.org/licenses/MIT).
 
 ## 📝 Author
 
