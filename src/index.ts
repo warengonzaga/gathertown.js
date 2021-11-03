@@ -2,26 +2,25 @@
 import requester from "./requester";
 
 interface IGather {
-  apiKey: string;
   getMap(spaceId: string, mapId: string): Promise<any>;
   getEmailGuestlist(spaceId: string): Promise<any>;
 }
 
-function Gather(apiKey = ""): IGather {
+function Gather(initialApiKey: string): IGather {
   const getMap = (spaceId: string, mapId: string) => {
     // TODO: Catch nullish value for params
-    const _formattedSpaceID = spaceId.replace(/\//gi, "\\\\");
-    const _space = "?spaceId=" + _formattedSpaceID;
-    const _map = "&mapId=" + mapId;
-    const _apiKey = "&apiKey=" + apiKey;
-    return _sendRequest("getMap" + _space + _map + _apiKey);
+    const formattedSpaceID = spaceId.replace(/\//gi, "\\\\");
+    const space = "?spaceId=" + formattedSpaceID;
+    const map = "&mapId=" + mapId;
+    const apiKey = "&apiKey=" + initialApiKey;
+    return _sendRequest("getMap" + space + map + apiKey);
   };
 
   const getEmailGuestlist = (spaceId: string) => {
     // TODO: Catch nullish value for params
-    const _space = "?spaceId=" + spaceId;
-    const _apiKey = "&apiKey=" + apiKey;
-    return _sendRequest("getEmailGuestlist" + _space + _apiKey);
+    const space = "?spaceId=" + spaceId;
+    const apiKey = "&apiKey=" + initialApiKey;
+    return _sendRequest("getEmailGuestlist" + space + apiKey);
   };
 
   const _sendRequest = async (path: string) => {
@@ -38,10 +37,13 @@ function Gather(apiKey = ""): IGather {
   };
 
   return {
-    apiKey,
     getEmailGuestlist,
     getMap,
   };
 }
+
+export const useGather = (apiKey: string) => {
+  return Gather(apiKey);
+};
 
 export default Gather;

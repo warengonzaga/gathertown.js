@@ -19,6 +19,11 @@ $parcel$defineInteropFlag(module.exports);
 
 $parcel$export(
   module.exports,
+  "useGather",
+  () => $b03e17997ed23475$export$6206ac3e2e7d12ef
+);
+$parcel$export(
+  module.exports,
   "default",
   () => $b03e17997ed23475$export$2e2bcd8739ae039
 );
@@ -39,20 +44,20 @@ const $8332f679e1af33ed$var$requester = $parcel$interopDefault(
 });
 var $8332f679e1af33ed$export$2e2bcd8739ae039 = $8332f679e1af33ed$var$requester;
 
-function $b03e17997ed23475$var$Gather(apiKey = "") {
+function $b03e17997ed23475$var$Gather(initialApiKey) {
   const getMap = (spaceId, mapId) => {
     // TODO: Catch nullish value for params
-    const _formattedSpaceID = spaceId.replace(/\//gi, "\\\\");
-    const _space = "?spaceId=" + _formattedSpaceID;
-    const _map = "&mapId=" + mapId;
-    const _apiKey = "&apiKey=" + apiKey;
-    return _sendRequest("getMap" + _space + _map + _apiKey);
+    const formattedSpaceID = spaceId.replace(/\//gi, "\\\\");
+    const space = "?spaceId=" + formattedSpaceID;
+    const map = "&mapId=" + mapId;
+    const apiKey = "&apiKey=" + initialApiKey;
+    return _sendRequest("getMap" + space + map + apiKey);
   };
   const getEmailGuestlist = (spaceId) => {
     // TODO: Catch nullish value for params
-    const _space = "?spaceId=" + spaceId;
-    const _apiKey = "&apiKey=" + apiKey;
-    return _sendRequest("getEmailGuestlist" + _space + _apiKey);
+    const space = "?spaceId=" + spaceId;
+    const apiKey = "&apiKey=" + initialApiKey;
+    return _sendRequest("getEmailGuestlist" + space + apiKey);
   };
   const _sendRequest = async (path) => {
     try {
@@ -67,11 +72,13 @@ function $b03e17997ed23475$var$Gather(apiKey = "") {
     }
   };
   return {
-    apiKey: apiKey,
     getEmailGuestlist: getEmailGuestlist,
     getMap: getMap,
   };
 }
+const $b03e17997ed23475$export$6206ac3e2e7d12ef = (apiKey) => {
+  return $b03e17997ed23475$var$Gather(apiKey);
+};
 var $b03e17997ed23475$export$2e2bcd8739ae039 = $b03e17997ed23475$var$Gather;
 
 //# sourceMappingURL=gather.js.map
