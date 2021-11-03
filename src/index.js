@@ -6,16 +6,19 @@ class GATHER {
     }
 
     getMap(spaceID, mapID) {
-        let space = '?spaceId='+spaceID;
-        let map = '&mapId='+mapID;
-        let apiKey = '&apiKey='+this.apiKey;
-        return this._sendRequest('getMap'+space+map+apiKey);
+        // TODO: Catch nullish value for params
+        const formattedSpaceID = spaceID.replace(/\//ig, '\\');
+        const space = '?spaceId=' + formattedSpaceID;
+        const map = '&mapId=' + mapID;
+        const apiKey = '&apiKey=' + this.apiKey;
+        return this._sendRequest('getMap' + space + map + apiKey);
     }
 
     getEmailGuestList(spaceID) {
-        let space = '?spaceId='+spaceID;
-        let apiKey = '&apiKey='+this.apiKey;
-        return this._sendRequest('getEmailGuestlist'+space+apiKey);
+        // TODO: Catch nullish value for params
+        const space = '?spaceId=' + spaceID;
+        const apiKey = '&apiKey=' + this.apiKey;
+        return this._sendRequest('getEmailGuestlist' + space + apiKey);
     }
 
     async _sendRequest(path) {
