@@ -2,8 +2,9 @@
   "name": "gathertown.js",
   "version": "1.0.0-rc.1.1",
   "description": "A simple and lightweight but powerful NodeJS client for Gather Town API.",
-  "source": "src/index.js",
+  "source": "src/index.ts",
   "main": "dist/gather.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "watch": "parcel watch",
     "build": "parcel build",
@@ -34,7 +35,9 @@
     "axios": "^0.24.0"
   },
   "devDependencies": {
+    "@parcel/packager-ts": "^2.0.0",
     "@parcel/transformer-typescript-tsc": "^2.0.0",
+    "@parcel/transformer-typescript-types": "^2.0.0",
     "@types/node": "^16.11.6",
     "@typescript-eslint/eslint-plugin": "^5.3.0",
     "@typescript-eslint/parser": "^5.3.0",
