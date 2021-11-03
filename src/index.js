@@ -7,7 +7,7 @@ class GATHER {
 
     getMap(spaceID, mapID) {
         // TODO: Catch nullish value for params
-        const formattedSpaceID = spaceID.replace(/\//ig, '\\');
+        const formattedSpaceID = spaceID.replace(/\//ig, '\\\\');
         const space = '?spaceId=' + formattedSpaceID;
         const map = '&mapId=' + mapID;
         const apiKey = '&apiKey=' + this.apiKey;
