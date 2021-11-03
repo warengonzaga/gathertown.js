@@ -1,2 +1,4 @@
 tsconfig.json
 etsc.config.js
+dist/
+build/
