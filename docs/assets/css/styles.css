@@ -33,6 +33,7 @@ main {
 	align-items: center;
 	justify-content: center;
 	padding-bottom: 50px;
+	margin-bottom: 50px;
 }
 
 #content {
@@ -46,12 +47,12 @@ main {
 	text-align: center;
 }
 
-#content .stars {
+#content .content__stars {
 	height: 80px;
 	align-self: flex-start;
 	position: relative;
-	top: 20px;
-	left: 10px;
+	top: 15px;
+	left: 42px;
 }
 
 @media screen and (max-width: 900px) {
@@ -101,7 +102,7 @@ nav {
 	background-color: #06D6A0;
 	color: #27244E;
 	margin-bottom:40px;
-	padding: 13px 24px;
+	padding: 14px 24px;
 	margin: 0px 100px;
 	text-decoration: none;
 	border-radius: 20px;
@@ -153,11 +154,19 @@ nav {
 	#content {
 		flex-direction: column;
 		align-items: center;
-		margin-top: 135px;
+	}
+
+	#content h1 {
+		margin-top: 0;
 	}
 
 	#content img {
 		height: 12rem;
+		margin-left: 18px;
+	}
+
+	#content .content__stars {
+		position: static;
 	}
 
 	.site__nav {
@@ -167,7 +176,7 @@ nav {
 	#install-script {
 		width: 380px;
 		max-width: 95%;
-		font-size: 12px;
+		font-size: 17px;
 		margin: 0 5%;
 		padding: 10px 10px;
 	}
