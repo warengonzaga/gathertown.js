@@ -72,20 +72,21 @@ nav {
 	position: relative;
 	display: flex;
 	flex-flow: row nowrap;
-	gap: 10px;
+	gap: 20px;
 }
 
 .site__nav {
 	text-decoration: none;
-	font-size: 20px;
+	font-size: 22px;
 	color: #06D6A0;
 	width: 100%;
 	font-weight: 700;
-	transition: all 0.15s ease-out;
+	transition: transform 0.12s ease-in, color 0.10s ease-in;
 }
 
 .site__nav:hover {
 	color: white;
+	transform: translate(0, -3px);
 }
 
 .site--color-green {
