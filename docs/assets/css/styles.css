@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	width: 100%;
+	height: 100vh;
+	min-height: 100vh;
+	overflow: hidden;
+	color: white;
+	background-color: #212542;
+}
+
+body {
+	text-align: center;
+	font-family: "DM Sans", sans-serif;
+	overflow: hidden;
+	height: 100%;
+	display: grid;
+	place-items: center;
+	justify-content: center;
+}
+
+main {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 50px;
+	margin-bottom: 50px;
+}
+
+#content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	left: 0;
+	width: 100%;
+	padding: 0 20px;
+	justify-content: center;
+	text-align: center;
+}
+
+#content .content__stars {
+	height: 80px;
+	align-self: flex-start;
+	position: relative;
+	top: 15px;
+	left: 42px;
+	transition: transform 0.4s;
+	opacity: 0;
+	animation: 0.60s ease-out 1.3s 1 scaleIn;
+	animation-fill-mode: forwards;
+}
+
+@keyframes scaleIn {
+	0% {
+		opacity: 0;
+		transform: matrix(0.1, 1, -1, 0.1, -10, -50);
+	}
+
+	100% {
+		opacity: 1;
+		transform: matrix(1, 0, 0, 1, 0, 0);
+	}
+}
+
+@media screen and (max-width: 900px) {
+	#content {
+		flex-direction: column;
+	}
+}
+
+.site__h1 {
+	font-size: 76px;
+	margin: 0px;
+	padding: 0px 10px;
+}
+
+nav {
+	margin: 10px 0 6px 0;
+	position: relative;
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 20px;
+}
+
+.site__nav {
+	text-decoration: none;
+	font-size: 25px;
+	color: #06D6A0;
+	width: 100%;
+	font-weight: 700;
+	transition: transform 0.12s ease-in, color 0.10s ease-in;
+}
+
+.site__nav:hover {
+	color: white;
+	transform: translate(0, -3px);
+}
+
+.site--color-green {
+	color: #06D6A0;
+}
+
+.site--color-white {
+	color: #FFF;
+}
+
+#install-script {
+	top: 8px;
+	position: relative;
+	background-color: #06D6A0;
+	color: #27244E;
+	margin-bottom:40px;
+	padding: 14px 24px;
+	margin: 0px 100px;
+	text-decoration: none;
+	border-radius: 20px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 22px;
+	font-weight: 700;
+	font-family: "Roboto Mono", monospace;
+}
+
+#install-script > span:first-of-type {
+	margin-right: 1.5rem;
+	user-select: none;
+}
+
+.install-script__text {
+	margin-right: 2rem;
+	user-select: all;
+}
+
+/* Filter is necessary to change the color of the copy button svg
+	To calculate another color: https://codepen.io/sosuke/pen/Pjoqqp */
+.install-script__copy {
+	filter: invert(12%) sepia(49%) saturate(707%) hue-rotate(193deg) brightness(88%) contrast(91%);
+	transition: all 0.15s ease-out;
+}
+
+.install-script__copy:hover {
+	filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(349deg) brightness(106%) contrast(104%);
+	cursor: pointer;
+}
+
+.install-script__copy:active {
+	filter: invert(71%) sepia(99%) saturate(294%) hue-rotate(351deg) brightness(105%) contrast(101%);
+}
+
+@media screen and (max-width: 600px) {
+	.site__h1 {
+		margin-top: 20px;
+		font-size: 42px;
+	}
+
+	nav {
+		margin-bottom: 0px;
+		gap: 10px;
+	}
+
+	#content {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#content h1 {
+		margin-top: 0;
+	}
+
+	#content img {
+		height: 12rem;
+		margin-left: 18px;
+	}
+
+	#content .content__stars {
+		position: static;
+	}
+
+	.site__nav {
+		font-size: 22px;
+	}
+
+	#install-script > span:first-of-type {
+		margin-right: 1rem;
+	}
+
+	.install-script__text {
+		margin-right: 1rem;
+	}
+
+	#install-script {
+		width: 380px;
+		max-width: 95%;
+		font-size: 18px;
+		margin: 0 5%;
+		padding: 10px 10px;
+	}
+}
