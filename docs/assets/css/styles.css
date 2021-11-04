@@ -53,6 +53,22 @@ main {
 	position: relative;
 	top: 15px;
 	left: 42px;
+	transition: transform 0.4s;
+	opacity: 0;
+	animation: 0.60s ease-out 1.3s 1 scaleIn;
+	animation-fill-mode: forwards;
+}
+
+@keyframes scaleIn {
+	0% {
+		opacity: 0;
+		transform: matrix(0.1, 1, -1, 0.1, -10, -50);
+	}
+
+	100% {
+		opacity: 1;
+		transform: matrix(1, 0, 0, 1, 0, 0);
+	}
 }
 
 @media screen and (max-width: 900px) {
@@ -117,12 +133,12 @@ nav {
 }
 
 #install-script > span:first-of-type {
-	margin-right: 1rem;
+	margin-right: 1.5rem;
 	user-select: none;
 }
 
 .install-script__text {
-	margin-right: 9px;
+	margin-right: 2rem;
 	user-select: all;
 }
 
@@ -149,7 +165,8 @@ nav {
 	}
 
 	nav {
-		margin-bottom: 7px;
+		margin-bottom: 0px;
+		gap: 10px;
 	}
 
 	#content {
