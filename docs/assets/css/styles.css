@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	width: 100%;
+	height: 100vh;
+	min-height: 100vh;
+	overflow: hidden;
+	color: white;
+	background-color: #212542;
+}
+
+body {
+	text-align: center;
+	font-family: "DM Sans", sans-serif;
+	overflow: hidden;
+	height: 100%;
+	display: grid;
+	place-items: center;
+	justify-content: center;
+}
+
+main {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 50px;
+}
+
+#content {
+	display: flex;
+	align-items: center;
+	gap: 22px;
+	left: 0;
+	width: 100%;
+	padding: 0 20px;
+	justify-content: center;
+	text-align: center;
+}
+
+#content img {
+	height: 120px;
+	border-radius: 50%;
+}
+
+@media screen and (max-width: 900px) {
+	#content {
+		flex-direction: column;
+	}
+	#content > img {
+		box-shadow: 2px 2px 6px 2px #3e3e3e33;
+	}
+}
+
+.site__h1 {
+	font-size: 76px;
+	margin: 0px;
+	padding: 0px 10px;
+}
+
+nav {
+	margin: 10px 0 10px 0;
+	position: relative;
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 10px;
+}
+
+.site__nav {
+	text-decoration: none;
+	font-size: 16px;
+	background-color: #9392A6;
+	padding: 8px 12px;
+	border-radius: 20px;
+	color: #27244E;
+	width: 100%;
+	font-weight: 700;
+	transition: all 0.15s ease-out;
+}
+
+.site__nav:hover {
+	background-color: white;
+}
+
+.site--color-green {
+	color: #06D6A0;
+}
+
+.site--color-white {
+	color: #FFF;
+}
+
+#install-script {
+	top: 8px;
+	position: relative;
+	background-color: #06D6A0;
+	color: #27244E;
+	margin-bottom:40px;
+	padding: 16px 24px;
+	margin: 0px 100px;
+	text-decoration: none;
+	border-radius: 20px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	font-weight: 700;
+	/* font-family: "Liberation Mono", monospace; */
+}
+
+#install-script > span:first-of-type {
+	user-select: none;
+}
+
+.install-script__text {
+	user-select: all;
+}
+
+.install-script__copy {
+	filter: invert(79%) sepia(48%) saturate(540%) hue-rotate(103deg) brightness(98%) contrast(81%);
+	transition: all 0.15s ease-out;
+}
+
+/* Filter is necessary to change the color of the copy button svg
+	To calculate another color: https://codepen.io/sosuke/pen/Pjoqqp */
+.install-script__copy:hover {
+	filter: invert(70%) sepia(6%) saturate(0%) hue-rotate(160deg) brightness(86%) contrast(93%);
+	cursor: pointer;
+}
+
+.install-script__copy:active {
+	filter: invert(0%) sepia(0%) saturate(7500%) hue-rotate(352deg) brightness(112%) contrast(105%);
+}
+
+@media screen and (max-width: 600px) {
+	.site__h1 {
+		margin-top: 20px;
+		font-size: 42px;
+	}
+
+	nav {
+		margin-bottom: 7px;
+	}
+
+	#content {
+		flex-direction: column;
+		align-items: center;
+		margin-top: 135px;
+	}
+
+	#content img {
+		height: 12rem;
+	}
+
+	.site__nav {
+		font-size: 18px;
+	}
+
+	#install-script {
+		width: 380px;
+		max-width: 95%;
+		font-size: 12px;
+		margin: 0 5%;
+		padding: 10px 10px;
+	}
+}
