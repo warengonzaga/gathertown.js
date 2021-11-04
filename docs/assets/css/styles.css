@@ -191,10 +191,18 @@ nav {
 		font-size: 22px;
 	}
 
+	#install-script > span:first-of-type {
+		margin-right: 1rem;
+	}
+
+	.install-script__text {
+		margin-right: 1rem;
+	}
+
 	#install-script {
 		width: 380px;
 		max-width: 95%;
-		font-size: 17px;
+		font-size: 18px;
 		margin: 0 5%;
 		padding: 10px 10px;
 	}
