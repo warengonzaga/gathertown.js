@@ -27,7 +27,7 @@ function Gather(initialApiKey: string): IGather {
       const res = await requester.get(path, {
         validateStatus: function (status) {
           return status >= 200 && status < 300;
-        }
+        },
       });
       return res.data;
     } catch (error: any) {
@@ -37,7 +37,7 @@ function Gather(initialApiKey: string): IGather {
 
   return {
     getEmailGuestlist,
-    getMap
+    getMap,
   };
 }
 

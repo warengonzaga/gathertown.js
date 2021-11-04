@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "watch": "parcel watch",
-    "build": "parcel build",
+    "build": "rimraf dist && parcel build",
     "prepare": "husky install"
   },
   "lint-staged": {

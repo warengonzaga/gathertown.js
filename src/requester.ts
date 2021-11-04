@@ -5,7 +5,7 @@ const { baseURL } = config;
 const requester = axios.create({
   baseURL,
   responseType: 'json',
-  validateStatus: (status) => status === 200
+  validateStatus: (status) => status === 200,
 });
 
 export default requester;

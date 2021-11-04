@@ -8,7 +8,7 @@ function $parcel$export(e, n, v, s) {
     get: v,
     set: s,
     enumerable: true,
-    configurable: true
+    configurable: true,
   });
 }
 function $parcel$interopDefault(a) {
@@ -29,7 +29,7 @@ $parcel$export(
 );
 
 const $2674e3ff4ad02d7c$var$config = {
-  baseURL: 'https://gather.town/api/'
+  baseURL: 'https://gather.town/api/',
 };
 var $2674e3ff4ad02d7c$export$2e2bcd8739ae039 = $2674e3ff4ad02d7c$var$config;
 
@@ -40,7 +40,7 @@ const $8332f679e1af33ed$var$requester = $parcel$interopDefault(
 ).create({
   baseURL: $8332f679e1af33ed$var$baseURL,
   responseType: 'json',
-  validateStatus: (status) => status === 200
+  validateStatus: (status) => status === 200,
 });
 var $8332f679e1af33ed$export$2e2bcd8739ae039 = $8332f679e1af33ed$var$requester;
 
@@ -64,7 +64,7 @@ function $b03e17997ed23475$var$Gather(initialApiKey) {
       const res = await $8332f679e1af33ed$export$2e2bcd8739ae039.get(path, {
         validateStatus: function (status) {
           return status >= 200 && status < 300;
-        }
+        },
       });
       return res.data;
     } catch (error) {
@@ -73,7 +73,7 @@ function $b03e17997ed23475$var$Gather(initialApiKey) {
   };
   return {
     getEmailGuestlist: getEmailGuestlist,
-    getMap: getMap
+    getMap: getMap,
   };
 }
 const $b03e17997ed23475$export$6206ac3e2e7d12ef = (apiKey) => {
