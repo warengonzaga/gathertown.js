@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
 
 *, *:before, *:after {
 	box-sizing: border-box;
@@ -37,8 +37,8 @@ main {
 
 #content {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	gap: 22px;
 	left: 0;
 	width: 100%;
 	padding: 0 20px;
@@ -46,17 +46,17 @@ main {
 	text-align: center;
 }
 
-#content img {
-	height: 120px;
-	border-radius: 50%;
+#content .stars {
+	height: 80px;
+	align-self: flex-start;
+	position: relative;
+	top: 20px;
+	left: 10px;
 }
 
 @media screen and (max-width: 900px) {
 	#content {
 		flex-direction: column;
-	}
-	#content > img {
-		box-shadow: 2px 2px 6px 2px #3e3e3e33;
 	}
 }
 
@@ -67,7 +67,7 @@ main {
 }
 
 nav {
-	margin: 10px 0 10px 0;
+	margin: 10px 0 6px 0;
 	position: relative;
 	display: flex;
 	flex-flow: row nowrap;
@@ -76,18 +76,15 @@ nav {
 
 .site__nav {
 	text-decoration: none;
-	font-size: 16px;
-	background-color: #9392A6;
-	padding: 8px 12px;
-	border-radius: 20px;
-	color: #27244E;
+	font-size: 20px;
+	color: #06D6A0;
 	width: 100%;
 	font-weight: 700;
 	transition: all 0.15s ease-out;
 }
 
 .site__nav:hover {
-	background-color: white;
+	color: white;
 }
 
 .site--color-green {
@@ -104,7 +101,7 @@ nav {
 	background-color: #06D6A0;
 	color: #27244E;
 	margin-bottom:40px;
-	padding: 16px 24px;
+	padding: 13px 24px;
 	margin: 0px 100px;
 	text-decoration: none;
 	border-radius: 20px;
@@ -112,33 +109,35 @@ nav {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 24px;
+	font-size: 22px;
 	font-weight: 700;
-	/* font-family: "Liberation Mono", monospace; */
+	font-family: "Roboto Mono", monospace;
 }
 
 #install-script > span:first-of-type {
+	margin-right: 1rem;
 	user-select: none;
 }
 
 .install-script__text {
+	margin-right: 9px;
 	user-select: all;
-}
-
-.install-script__copy {
-	filter: invert(79%) sepia(48%) saturate(540%) hue-rotate(103deg) brightness(98%) contrast(81%);
-	transition: all 0.15s ease-out;
 }
 
 /* Filter is necessary to change the color of the copy button svg
 	To calculate another color: https://codepen.io/sosuke/pen/Pjoqqp */
+.install-script__copy {
+	filter: invert(12%) sepia(49%) saturate(707%) hue-rotate(193deg) brightness(88%) contrast(91%);
+	transition: all 0.15s ease-out;
+}
+
 .install-script__copy:hover {
-	filter: invert(70%) sepia(6%) saturate(0%) hue-rotate(160deg) brightness(86%) contrast(93%);
+	filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(349deg) brightness(106%) contrast(104%);
 	cursor: pointer;
 }
 
 .install-script__copy:active {
-	filter: invert(0%) sepia(0%) saturate(7500%) hue-rotate(352deg) brightness(112%) contrast(105%);
+	filter: invert(71%) sepia(99%) saturate(294%) hue-rotate(351deg) brightness(105%) contrast(101%);
 }
 
 @media screen and (max-width: 600px) {
