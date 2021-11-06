@@ -2,15 +2,16 @@ import { useGather } from '../index';
 
 // can be ran directly with `npx ts-node src/examples/index.ts`
 
-const API_KEY = 'tBUTDQ6rF8MkOy8X';
+const API_KEY = 'API_KEY_HERE';
+const SPACE_ID_1 = 'gL2sTLbVCqghDwB8/gathertown_js';
+const SPACE_ID_2 = 'tiWyyxlRs6Bl1dVS/test-space-1';
 
 export const createRoomSample = async () => {
   const { createRoom } = useGather(API_KEY);
 
   const res = await createRoom({
     name: 'test-space-1',
-    // sourceSpace: 'gL2sTLbVCqghDwB8/gathertown_js',
-    map: 'bar-beach',
+    map: 'bar-beach', // has autocomplete for available map templates
     reason: 'testing space 1',
   });
 
@@ -21,7 +22,7 @@ export const getEmailGuestlistSample = async () => {
   const { getEmailGuestlist } = useGather(API_KEY);
 
   const res = await getEmailGuestlist({
-    spaceId: 'gL2sTLbVCqghDwB8/gathertown_js',
+    spaceId: SPACE_ID_1,
   });
 
   return res;
@@ -31,7 +32,7 @@ export const getMapSample = async () => {
   const { getMap } = useGather(API_KEY);
 
   const res = await getMap({
-    spaceId: 'gL2sTLbVCqghDwB8/gathertown_js',
+    spaceId: SPACE_ID_1,
     mapId: 'office-cozy',
   });
 
@@ -43,13 +44,13 @@ export const setMapSample = async () => {
 
   // SOURCE
   const mapContent = await getMap({
-    spaceId: 'gL2sTLbVCqghDwB8/gathertown_js',
+    spaceId: SPACE_ID_1,
     mapId: 'office-cozy',
   });
 
   // DESTINATION
   const res = await setMap({
-    spaceId: 'tiWyyxlRs6Bl1dVS/test-space-1',
+    spaceId: SPACE_ID_2,
     mapId: 'bar-beach',
     mapContent,
   });
@@ -61,7 +62,7 @@ export const setEmailGuestlistSample = async () => {
   const { setEmailGuestlist } = useGather(API_KEY);
 
   const res = await setEmailGuestlist({
-    spaceId: 'gL2sTLbVCqghDwB8/gathertown_js',
+    spaceId: SPACE_ID_1,
     guestlist: {
       'cjugs03@gmail5.com': {
         name: 'John Doe',
@@ -76,8 +77,9 @@ export const setEmailGuestlistSample = async () => {
 };
 
 const main = async () => {
-  console.log(await setEmailGuestlistSample());
-  console.log(await getEmailGuestlistSample());
+  console.log(await getMapSample());
+  // run other samples here
+  // can be ran directly with `npx ts-node src/examples/index.ts`
 };
 
 main().catch(console.error);
