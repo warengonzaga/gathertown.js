@@ -1,18 +1,20 @@
 import { CreateRoomProps, handleCreateRoom } from './api/createRoom';
 import { GetEmailGuestlistProps, handleGetEmailGuestlist } from './api/getEmailGuestList';
 import { GetMapProps, handleGetMap } from './api/getMap';
+import { SetMapProps, handleSetMap } from './api/setMap';
 
 interface IGather {
-  getMap(props: Omit<GetMapProps, 'apiKey'>): Promise<any>;
-  getEmailGuestlist(props: Omit<GetEmailGuestlistProps, 'apiKey'>): Promise<any>;
   createRoom(props: Omit<CreateRoomProps, 'apiKey'>): Promise<any>;
+  getEmailGuestlist(props: Omit<GetEmailGuestlistProps, 'apiKey'>): Promise<any>;
+  getMap(props: Omit<GetMapProps, 'apiKey'>): Promise<any>;
+  setMap(props: Omit<SetMapProps, 'apiKey'>): Promise<any>;
 }
 
 function Gather(initialApiKey: string): IGather {
   const getEmailGuestlist: IGather['getEmailGuestlist'] = async ({ spaceId }) => {
     const res = await handleGetEmailGuestlist({
-      spaceId,
       apiKey: initialApiKey,
+      spaceId,
     });
 
     return res.data;
@@ -28,11 +30,22 @@ function Gather(initialApiKey: string): IGather {
     return res.data;
   };
 
+  const setMap: IGather['setMap'] = async ({ mapId, spaceId, mapContent }) => {
+    const res = await handleSetMap({
+      apiKey: initialApiKey,
+      mapContent,
+      mapId,
+      spaceId,
+    });
+
+    return res.data;
+  };
+
   const createRoom: IGather['createRoom'] = async ({ name, map, reason, sourceSpace }) => {
     const res = await handleCreateRoom({
       apiKey: initialApiKey,
-      name,
       map,
+      name,
       reason,
       sourceSpace,
     });
@@ -41,9 +54,10 @@ function Gather(initialApiKey: string): IGather {
   };
 
   return {
+    createRoom,
     getEmailGuestlist,
     getMap,
-    createRoom,
+    setMap,
   };
 }
 

@@ -2,8 +2,8 @@ import api from './ApiBase';
 import validateStatus from './validateStatus';
 
 export interface GetEmailGuestlistProps {
-  spaceId: string;
   apiKey: string;
+  spaceId: string;
 }
 
 export const handleGetEmailGuestlist = ({ apiKey, spaceId }: GetEmailGuestlistProps) => {

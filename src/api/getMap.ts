@@ -2,9 +2,9 @@ import api from './ApiBase';
 import validateStatus from './validateStatus';
 
 export interface GetMapProps {
-  spaceId: string;
-  mapId: string;
   apiKey: string;
+  mapId: string;
+  spaceId: string;
 }
 
 export const handleGetMap = ({ apiKey, mapId, spaceId }: GetMapProps) => {

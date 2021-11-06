@@ -1,18 +1,29 @@
 import api from './ApiBase';
 import validateStatus from './validateStatus';
-import { handleGetMap } from './getMap';
 
 export interface SetMapProps {
   apiKey: string;
-  spaceId: string;
   mapId: string;
-  mapContent: ReturnType<typeof handleGetMap>;
+  spaceId: string;
+  // TODO: get proper return type of getMap
+  // ReturnType<typeof getMap>;
+  mapContent: any;
 }
 
-export const handleSetMap = (data: SetMapProps) => {
+export const handleSetMap = ({ apiKey, mapContent, mapId, spaceId }: SetMapProps) => {
   // Required params
+  const formattedSpaceID = spaceId.replace(/\//gi, '\\');
 
-  return api.post('setMap', data, {
-    validateStatus,
-  });
+  return api.post(
+    'setMap',
+    {
+      apiKey,
+      spaceId: formattedSpaceID,
+      mapId,
+      mapContent,
+    },
+    {
+      validateStatus,
+    }
+  );
 };
