@@ -1,3 +1,4 @@
+import type { IGuest } from '../types';
 import api from './ApiBase';
 import validateStatus from './validateStatus';
 
@@ -12,7 +13,7 @@ export const handleGetEmailGuestlist = ({ apiKey, spaceId }: GetEmailGuestlistPr
   const _spaceId = '?spaceId=' + formattedSpaceID;
   const _apiKey = '&apiKey=' + apiKey;
 
-  return api.get(`getEmailGuestlist${_spaceId}${_apiKey}`, {
+  return api.get<IGuest>(`getEmailGuestlist${_spaceId}${_apiKey}`, {
     validateStatus,
   });
 };

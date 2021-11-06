@@ -1,3 +1,11 @@
+export interface IGuest {
+  [key: string]: {
+    name?: string;
+    affiliation?: string;
+    role?: string;
+  };
+}
+
 export type MapType =
   | 'all-hands-medium'
   | 'all-hands-small'

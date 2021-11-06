@@ -1,16 +1,31 @@
+import type { IGuest } from './types';
 import { CreateRoomProps, handleCreateRoom } from './api/createRoom';
 import { GetEmailGuestlistProps, handleGetEmailGuestlist } from './api/getEmailGuestList';
 import { GetMapProps, handleGetMap } from './api/getMap';
+import { handleSetEmailGuestlist, SetEmailGuestlistProps } from './api/setEmailGuestlist';
 import { SetMapProps, handleSetMap } from './api/setMap';
 
 interface IGather {
-  createRoom(props: Omit<CreateRoomProps, 'apiKey'>): Promise<any>;
-  getEmailGuestlist(props: Omit<GetEmailGuestlistProps, 'apiKey'>): Promise<any>;
+  createRoom(props: Omit<CreateRoomProps, 'apiKey'>): Promise<string>;
+  getEmailGuestlist(props: Omit<GetEmailGuestlistProps, 'apiKey'>): Promise<IGuest>;
   getMap(props: Omit<GetMapProps, 'apiKey'>): Promise<any>;
   setMap(props: Omit<SetMapProps, 'apiKey'>): Promise<any>;
+  setEmailGuestlist(props: Omit<SetEmailGuestlistProps, 'apiKey'>): Promise<IGuest>;
 }
 
 function Gather(initialApiKey: string): IGather {
+  const createRoom: IGather['createRoom'] = async ({ name, map, reason, sourceSpace }) => {
+    const res = await handleCreateRoom({
+      apiKey: initialApiKey,
+      map,
+      name,
+      reason,
+      sourceSpace,
+    });
+
+    return res.data;
+  };
+
   const getEmailGuestlist: IGather['getEmailGuestlist'] = async ({ spaceId }) => {
     const res = await handleGetEmailGuestlist({
       apiKey: initialApiKey,
@@ -41,13 +56,16 @@ function Gather(initialApiKey: string): IGather {
     return res.data;
   };
 
-  const createRoom: IGather['createRoom'] = async ({ name, map, reason, sourceSpace }) => {
-    const res = await handleCreateRoom({
+  const setEmailGuestlist: IGather['setEmailGuestlist'] = async ({
+    spaceId,
+    guestlist,
+    overwrite,
+  }) => {
+    const res = await handleSetEmailGuestlist({
       apiKey: initialApiKey,
-      map,
-      name,
-      reason,
-      sourceSpace,
+      spaceId,
+      guestlist,
+      overwrite,
     });
 
     return res.data;
@@ -58,6 +76,7 @@ function Gather(initialApiKey: string): IGather {
     getEmailGuestlist,
     getMap,
     setMap,
+    setEmailGuestlist,
   };
 }
 

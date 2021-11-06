@@ -32,7 +32,7 @@ export const handleCreateRoom = ({ apiKey, name, map, reason, sourceSpace }: Cre
     data.reason = reason;
   }
 
-  return api.post('createRoom', data, {
+  return api.post<string>('createRoom', data, {
     validateStatus,
   });
 };
