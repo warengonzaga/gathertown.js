@@ -20,6 +20,9 @@ Currently supports **HTTP API** `GET` requests.
 
 - `GET getMap()`
 - `GET getEmailGuestList()`
+- `POST createSpace()`
+- `POST setEmailGuestlist()`
+- `POST setMap()`
 
 > NOTE: Currently working on Websocket API support as suggested by the team at Gather. Check out the discussion here: [#10](https://github.com/WarenGonzaga/gathertown.js/issues/10) and [#11](https://github.com/WarenGonzaga/gathertown.js/issues/11).
 
