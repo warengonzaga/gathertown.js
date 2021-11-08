@@ -14,12 +14,12 @@ A simple and lightweight but powerful NodeJS client for [Gather Town](http://gat
 
 ## ⚡ Features
 
-Currently supports **HTTP API** ``GET`` requests.
+Currently supports **HTTP API** `GET` requests.
 
 ### HTTP API
 
-- ``GET getMap()``
-- ``GET getEmailGuestList()``
+- `GET getMap()`
+- `GET getEmailGuestList()`
 
 > NOTE: Currently working on Websocket API support as suggested by the team at Gather. Check out the discussion here: [#10](https://github.com/WarenGonzaga/gathertown.js/issues/10) and [#11](https://github.com/WarenGonzaga/gathertown.js/issues/11).
 
@@ -36,16 +36,39 @@ Example usage of the GatherTownJS.
 ```js
 const GATHER = require('gathertown.js'); // add gather package
 const access = require('./config.json'); // load your apikey
-const gather = new GATHER(access.key); // access keys
+const gather = GATHER(access.key); // access keys
 
 // some variables
-const spaceID = 'space-id\\space-name';
-const mapID = 'map-name';
+const spaceId = 'space-id/space-name';
+const mapId = 'map-name';
 
 function map() {
-    gather.getMap(spaceID, mapID)
-        .then(data => console.log(data))
-        .catch(err => console.log(err));
+  gather
+    .getMap({ spaceId, mapId })
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err));
+}
+
+map();
+```
+
+### ⚓ With Hooks
+
+```js
+const { useGather } = require('gathertown.js');
+const access = require('./config.json'); // load your apikey
+
+// some variables
+const spaceId = 'space-id/space-name';
+const mapId = 'map-name';
+
+function map() {
+  // load only needed functions
+  const { getMap } = useGather(access.key);
+
+  getMap({ spaceId, mapId })
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err));
 }
 
 map();
@@ -53,7 +76,7 @@ map();
 
 ## 🎯 Contributing
 
-Contributions are welcome, create a pull request to this repo and I will review your code. Please consider to submit your pull request to the ```dev``` branch. Thank you!
+Contributions are welcome, create a pull request to this repo and I will review your code. Please consider to submit your pull request to the `dev` branch. Thank you!
 
 ## 💬 Discussions
 
