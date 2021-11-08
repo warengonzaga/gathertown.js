@@ -1,6 +1,6 @@
-import type { IGuest } from '../types';
-import api from './apiBase';
-import validateStatus from './validateStatus';
+import type { IGuest } from '../../types';
+import api from '../apiBase';
+import validateStatus from '../validateStatus';
 
 export interface GetEmailGuestlistProps {
   apiKey: string;

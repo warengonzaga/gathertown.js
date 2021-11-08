@@ -1,6 +1,6 @@
-import type { MapType } from '../types';
-import api from './apiBase';
-import validateStatus from './validateStatus';
+import type { MapType } from '../../types';
+import api from '../apiBase';
+import validateStatus from '../validateStatus';
 
 export interface CreateSpaceProps {
   apiKey: string;

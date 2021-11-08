@@ -1,5 +1,5 @@
-import api from './apiBase';
-import validateStatus from './validateStatus';
+import api from '../apiBase';
+import validateStatus from '../validateStatus';
 
 export interface SetMapProps {
   apiKey: string;

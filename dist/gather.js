@@ -32,11 +32,11 @@ const $ddb7129aa96814bd$var$axiosInstance = $parcel$interopDefault($1ZQrD$axios)
 });
 var $ddb7129aa96814bd$export$2e2bcd8739ae039 = $ddb7129aa96814bd$var$axiosInstance;
 
-function $8da348cc7bc20190$export$2e2bcd8739ae039(status) {
+function $c3c601e37dbdfe9e$export$2e2bcd8739ae039(status) {
   return status >= 200 && status < 300;
 }
 
-const $39f1ee161777be93$export$481725944cb98aa3 = ({
+const $9b677507fb2ea3ca$export$481725944cb98aa3 = ({
   apiKey: apiKey,
   name: name,
   map: map,
@@ -57,21 +57,21 @@ const $39f1ee161777be93$export$481725944cb98aa3 = ({
   // Optional param
   if (reason) data.reason = reason;
   return $ddb7129aa96814bd$export$2e2bcd8739ae039.post('createRoom', data, {
-    validateStatus: $8da348cc7bc20190$export$2e2bcd8739ae039,
+    validateStatus: $c3c601e37dbdfe9e$export$2e2bcd8739ae039,
   });
 };
 
-const $bad36371e9559ee5$export$95d70fc673ee2b6c = ({ apiKey: apiKey, spaceId: spaceId }) => {
+const $67e6e03ffe0f38ac$export$95d70fc673ee2b6c = ({ apiKey: apiKey, spaceId: spaceId }) => {
   // TODO: Catch nullish value for params
   const formattedSpaceID = spaceId.replace(/\//gi, '\\');
   const _spaceId = '?spaceId=' + formattedSpaceID;
   const _apiKey = '&apiKey=' + apiKey;
   return $ddb7129aa96814bd$export$2e2bcd8739ae039.get(`getEmailGuestlist${_spaceId}${_apiKey}`, {
-    validateStatus: $8da348cc7bc20190$export$2e2bcd8739ae039,
+    validateStatus: $c3c601e37dbdfe9e$export$2e2bcd8739ae039,
   });
 };
 
-const $86f6ab580d0bd5cc$export$f292afb1e783364c = ({
+const $1e61c72e998b419b$export$f292afb1e783364c = ({
   apiKey: apiKey,
   mapId: mapId,
   spaceId: spaceId,
@@ -82,11 +82,11 @@ const $86f6ab580d0bd5cc$export$f292afb1e783364c = ({
   const _mapId = '&mapId=' + mapId;
   const _apiKey = '&apiKey=' + apiKey;
   return $ddb7129aa96814bd$export$2e2bcd8739ae039.get(`getMap${_spaceId}${_mapId}${_apiKey}`, {
-    validateStatus: $8da348cc7bc20190$export$2e2bcd8739ae039,
+    validateStatus: $c3c601e37dbdfe9e$export$2e2bcd8739ae039,
   });
 };
 
-const $cb6d4144f18102f8$export$7119370e1336d485 = ({
+const $47f2afa106c5c247$export$7119370e1336d485 = ({
   apiKey: apiKey,
   spaceId: spaceId,
   guestlist: guestlist,
@@ -100,11 +100,11 @@ const $cb6d4144f18102f8$export$7119370e1336d485 = ({
     overwrite: overwrite,
   });
   return $ddb7129aa96814bd$export$2e2bcd8739ae039.post('setEmailGuestlist', data, {
-    validateStatus: $8da348cc7bc20190$export$2e2bcd8739ae039,
+    validateStatus: $c3c601e37dbdfe9e$export$2e2bcd8739ae039,
   });
 };
 
-const $f4aa9d8e92b70b3e$export$3038311898482a66 = ({
+const $b594183b739d3bf6$export$3038311898482a66 = ({
   apiKey: apiKey,
   mapContent: mapContent,
   mapId: mapId,
@@ -121,7 +121,7 @@ const $f4aa9d8e92b70b3e$export$3038311898482a66 = ({
       mapContent: mapContent,
     },
     {
-      validateStatus: $8da348cc7bc20190$export$2e2bcd8739ae039,
+      validateStatus: $c3c601e37dbdfe9e$export$2e2bcd8739ae039,
     }
   );
 };
@@ -133,7 +133,7 @@ function $b03e17997ed23475$var$Gather(initialApiKey) {
     reason: reason,
     sourceSpace: sourceSpace,
   }) => {
-    const res = await $39f1ee161777be93$export$481725944cb98aa3({
+    const res = await $9b677507fb2ea3ca$export$481725944cb98aa3({
       apiKey: initialApiKey,
       map: map,
       name: name,
@@ -143,14 +143,14 @@ function $b03e17997ed23475$var$Gather(initialApiKey) {
     return res.data;
   };
   const getEmailGuestlist = async ({ spaceId: spaceId }) => {
-    const res = await $bad36371e9559ee5$export$95d70fc673ee2b6c({
+    const res = await $67e6e03ffe0f38ac$export$95d70fc673ee2b6c({
       apiKey: initialApiKey,
       spaceId: spaceId,
     });
     return res.data;
   };
   const getMap = async ({ mapId: mapId, spaceId: spaceId }) => {
-    const res = await $86f6ab580d0bd5cc$export$f292afb1e783364c({
+    const res = await $1e61c72e998b419b$export$f292afb1e783364c({
       apiKey: initialApiKey,
       mapId: mapId,
       spaceId: spaceId,
@@ -158,7 +158,7 @@ function $b03e17997ed23475$var$Gather(initialApiKey) {
     return res.data;
   };
   const setMap = async ({ mapId: mapId, spaceId: spaceId, mapContent: mapContent }) => {
-    const res = await $f4aa9d8e92b70b3e$export$3038311898482a66({
+    const res = await $b594183b739d3bf6$export$3038311898482a66({
       apiKey: initialApiKey,
       mapContent: mapContent,
       mapId: mapId,
@@ -171,7 +171,7 @@ function $b03e17997ed23475$var$Gather(initialApiKey) {
     guestlist: guestlist,
     overwrite: overwrite,
   }) => {
-    const res = await $cb6d4144f18102f8$export$7119370e1336d485({
+    const res = await $47f2afa106c5c247$export$7119370e1336d485({
       apiKey: initialApiKey,
       spaceId: spaceId,
       guestlist: guestlist,
