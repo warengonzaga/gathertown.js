@@ -1,11 +1,12 @@
-interface IGuest {
+export interface IGuest {
   [key: string]: {
     name?: string;
     affiliation?: string;
     role?: string;
   };
 }
-type MapType =
+
+export type MapType =
   | 'all-hands-medium'
   | 'all-hands-small'
   | 'auditorium-breakout-small-A'
@@ -148,43 +149,3 @@ type MapType =
   | 'uni-rec'
   | 'waterfront'
   | 'zen-garden';
-interface CreateSpaceProps {
-  apiKey: string;
-  name: string;
-  map?: MapType;
-  reason?: string;
-  sourceSpace?: string;
-}
-interface GetEmailGuestlistProps {
-  apiKey: string;
-  spaceId: string;
-}
-interface GetMapProps {
-  apiKey: string;
-  mapId: string;
-  spaceId: string;
-}
-interface SetEmailGuestlistProps {
-  apiKey: string;
-  spaceId: string;
-  guestlist: IGuest;
-  overwrite?: boolean;
-}
-interface SetMapProps {
-  apiKey: string;
-  mapId: string;
-  spaceId: string;
-  mapContent: any;
-}
-interface IGather {
-  createSpace(props: Omit<CreateSpaceProps, 'apiKey'>): Promise<string>;
-  getEmailGuestlist(props: Omit<GetEmailGuestlistProps, 'apiKey'>): Promise<IGuest>;
-  getMap(props: Omit<GetMapProps, 'apiKey'>): Promise<any>;
-  setMap(props: Omit<SetMapProps, 'apiKey'>): Promise<any>;
-  setEmailGuestlist(props: Omit<SetEmailGuestlistProps, 'apiKey'>): Promise<IGuest>;
-}
-export default function Gather(initialApiKey: string): IGather;
-export const useGather: (apiKey: string) => IGather;
-export default Gather;
-
-//# sourceMappingURL=index.d.ts.map
