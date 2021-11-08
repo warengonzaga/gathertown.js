@@ -1,8 +1,8 @@
 import type { MapType } from '../types';
-import api from './ApiBase';
+import api from './apiBase';
 import validateStatus from './validateStatus';
 
-export interface CreateRoomProps {
+export interface CreateSpaceProps {
   apiKey: string;
   name: string;
   map?: MapType;
@@ -10,9 +10,9 @@ export interface CreateRoomProps {
   sourceSpace?: string;
 }
 
-export const handleCreateRoom = ({ apiKey, name, map, reason, sourceSpace }: CreateRoomProps) => {
+export const handleCreateSpace = ({ apiKey, name, map, reason, sourceSpace }: CreateSpaceProps) => {
   // Required params
-  const data: CreateRoomProps = {
+  const data: CreateSpaceProps = {
     apiKey,
     name,
   };
