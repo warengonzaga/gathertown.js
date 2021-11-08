@@ -148,7 +148,7 @@ type MapType =
   | 'uni-rec'
   | 'waterfront'
   | 'zen-garden';
-interface CreateRoomProps {
+interface CreateSpaceProps {
   apiKey: string;
   name: string;
   map?: MapType;
@@ -177,7 +177,7 @@ interface SetMapProps {
   mapContent: any;
 }
 interface IGather {
-  createRoom(props: Omit<CreateRoomProps, 'apiKey'>): Promise<string>;
+  createSpace(props: Omit<CreateSpaceProps, 'apiKey'>): Promise<string>;
   getEmailGuestlist(props: Omit<GetEmailGuestlistProps, 'apiKey'>): Promise<IGuest>;
   getMap(props: Omit<GetMapProps, 'apiKey'>): Promise<any>;
   setMap(props: Omit<SetMapProps, 'apiKey'>): Promise<any>;
