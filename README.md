@@ -1,10 +1,10 @@
-# GatherTownJS (Unofficial)
+# GatherTownJS (Unofficial) [![openbase](https://badges.openbase.com/js/rating/gathertown.js.svg)](https://openbase.com/js/gathertown.js?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge) [![huntr](https://cdn.huntr.dev/huntr_security_badge_mono.svg)](https://huntr.dev)
 
 [![created by](https://img.shields.io/badge/created%20by-Waren%20Gonzaga-blue.svg?longCache=true&style=flat-square)](https://github.com/warengonzaga) [![discord](https://img.shields.io/discord/659684980137656340?color=%235865F2&label=discord&logo=discord&logoColor=white&style=flat-square)](https://wrngnz.ga/discord) [![release](https://img.shields.io/github/release/warengonzaga/gathertown.js.svg?style=flat-square)](https://github.com/warengonzaga/gathertown.js/releases) [![star](https://img.shields.io/github/stars/warengonzaga/gathertown.js.svg?style=flat-square)](https://github.com/warengonzaga/gathertown.js/stargazers) [![license](https://img.shields.io/github/license/warengonzaga/gathertown.js.svg?style=flat-square)](https://github.com/warengonzaga/gathertown.js/blob/main/license)
 
 📢 Nominate ([@WarenGonzaga](https://warengonzaga.com)) as **[GitHub Star](https://stars.github.com/nominate)**. If you appreciate his hardwork and dedication to open source.
 
----
+[![repo banner](.github/img/repo_banner.png)](https://gathertown.js.org)
 
 A simple and lightweight but powerful NodeJS client for [Gather Town](http://gather.town) API.
 
@@ -14,12 +14,15 @@ A simple and lightweight but powerful NodeJS client for [Gather Town](http://gat
 
 ## ⚡ Features
 
-Currently supports **HTTP API** ``GET`` requests.
+Currently supports **HTTP API** `GET` requests.
 
 ### HTTP API
 
-- ``GET getMap()``
-- ``GET getEmailGuestList()``
+- `GET getMap()`
+- `GET getEmailGuestList()`
+- `POST createSpace()`
+- `POST setEmailGuestlist()`
+- `POST setMap()`
 
 > NOTE: Currently working on Websocket API support as suggested by the team at Gather. Check out the discussion here: [#10](https://github.com/WarenGonzaga/gathertown.js/issues/10) and [#11](https://github.com/WarenGonzaga/gathertown.js/issues/11).
 
@@ -36,16 +39,39 @@ Example usage of the GatherTownJS.
 ```js
 const GATHER = require('gathertown.js'); // add gather package
 const access = require('./config.json'); // load your apikey
-const gather = new GATHER(access.key); // access keys
+const gather = GATHER(access.key); // access keys
 
 // some variables
-const spaceID = 'space-id\\space-name';
-const mapID = 'map-name';
+const spaceId = 'space-id/space-name';
+const mapId = 'map-name';
 
 function map() {
-    gather.getMap(spaceID, mapID)
-        .then(data => console.log(data))
-        .catch(err => console.log(err));
+  gather
+    .getMap({ spaceId, mapId })
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err));
+}
+
+map();
+```
+
+### ⚓ With Hooks
+
+```js
+const { useGather } = require('gathertown.js');
+const access = require('./config.json'); // load your apikey
+
+// some variables
+const spaceId = 'space-id/space-name';
+const mapId = 'map-name';
+
+function map() {
+  // load only needed functions
+  const { getMap } = useGather(access.key);
+
+  getMap({ spaceId, mapId })
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err));
 }
 
 map();
@@ -53,7 +79,9 @@ map();
 
 ## 🎯 Contributing
 
-Contributions are welcome, create a pull request to this repo and I will review your code. Please consider to submit your pull request to the ```dev``` branch. Thank you!
+Contributions are welcome, create a pull request to this repo and I will review your code. Please consider to submit your pull request to the `dev` branch. Thank you!
+
+Read the project's [contributing guide](./CONTRIBUTING.md) for more info.
 
 ## 💬 Discussions
 

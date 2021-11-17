@@ -3,6 +3,8 @@
 
 # node
 node_modules
+/.pnp
+.pnp.js
 
 # parcel
 .parcel-cache
@@ -11,5 +13,21 @@ node_modules
 *.js
 !src/*.js
 !dist/*.js
-*.json
 *.http
+
+# typescript
+*.tsbuildinfo
+
+# eslint
+.eslintcache
+
+# environment files
+.env
+.env.local
+.env.production
+.env.development
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
