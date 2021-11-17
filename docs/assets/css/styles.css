@@ -59,6 +59,11 @@ main {
 	animation-fill-mode: forwards;
 }
 
+#content p {
+	font-size: 18px;
+	width: 400px;
+}
+
 @keyframes scaleIn {
 	0% {
 		opacity: 0;
