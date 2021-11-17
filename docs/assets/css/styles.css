@@ -11,7 +11,7 @@ html {
 	min-height: 100vh;
 	overflow: hidden;
 	color: white;
-	background-color: #212542;
+	background-color: #333A64;
 }
 
 body {
@@ -117,7 +117,7 @@ nav {
 	top: 8px;
 	position: relative;
 	background-color: #06D6A0;
-	color: #27244E;
+	color: #333A64;
 	margin-bottom:40px;
 	padding: 14px 24px;
 	margin: 0px 100px;
