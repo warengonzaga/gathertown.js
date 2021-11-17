@@ -4,7 +4,7 @@
 
 📢 Nominate ([@WarenGonzaga](https://warengonzaga.com)) as **[GitHub Star](https://stars.github.com/nominate)**. If you appreciate his hardwork and dedication to open source.
 
----
+[![repo banner](.github/img/repo_banner.png)](https://gathertown.js.org)
 
 A simple and lightweight but powerful NodeJS client for [Gather Town](http://gather.town) API.
 
