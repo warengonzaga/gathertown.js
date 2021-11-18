@@ -14,9 +14,9 @@ A simple and lightweight but powerful NodeJS client for [Gather Town](http://gat
 
 ## ⚡ Features
 
-Currently supports **HTTP API** `GET` requests.
+Currently it supports **Gather HTTP API** `GET` and `POST` requests. We are currently working on **Gather Websocket API**.
 
-### HTTP API
+### HTTP API (100% Coverage)
 
 - `GET getMap()`
 - `GET getEmailGuestList()`
@@ -95,9 +95,10 @@ If you're facing a problem in using GatherTownJS please let me know by [creating
 
 [![BuyMeaCoffee](https://img.shields.io/badge/Buymeacoffee-%23FFDD00.svg?&style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoff.ee/warengonzaga) [![Vercel](https://img.shields.io/badge/Vercel-%23000.svg?&style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com) [![CircleCI](https://img.shields.io/badge/CircleCI-%23000.svg?&style=for-the-badge&logo=CircleCI&logoColor=white)](https://vercel.com) [![GitBook](https://img.shields.io/badge/GitBook-%233884FF.svg?&style=for-the-badge&logo=gitbook&logoColor=white)](https://gitbook.io) [![Digital Ocean](https://img.shields.io/badge/Digital%20Ocean-%230080ff.svg?&style=for-the-badge&logo=digitalocean&logoColor=white)](https://digitalocean.com) [![Deepware](https://img.shields.io/badge/deepware-%23cb2653.svg?&style=for-the-badge&logoColor=white)](https://deepware.ai/) [![NOWPayments](https://img.shields.io/badge/NOWPayments-%2364ACFF.svg?&style=for-the-badge&logoColor=white)](https://nowpayments.io) [![StackHawk](https://img.shields.io/badge/Stackhawk-%2300CBC6.svg?&style=for-the-badge&logoColor=white)](https://stackhawk.com)
 
-> Love what I do? **[Send me some coffees](https://buymeacoff.ee/wareneutron)**!
-> Can't send coffees? Nominate me for a **[GitHub Star](https://stars.github.com/nominate)** instead!
-> Your coffee donation and support will help me to continue working on open-source projects like this.
+> Love what I do? **[Send me some coffees](https://buymeacoff.ee/wareneutron)**! ☕☕☕
+>
+> Can't send coffees? 😥 Nominate me for a **[GitHub Star](https://stars.github.com/nominate)** instead!
+> Your coffee donation and support will help me to continue working on open-source projects like this. 🙏😇
 
 ## 🌏 Community
 
