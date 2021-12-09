@@ -11,7 +11,7 @@ html {
 	min-height: 100vh;
 	overflow: hidden;
 	color: white;
-	background-color: #212542;
+	background-color: #333A64;
 }
 
 body {
@@ -57,6 +57,11 @@ main {
 	opacity: 0;
 	animation: 0.60s ease-out 1.3s 1 scaleIn;
 	animation-fill-mode: forwards;
+}
+
+#content p {
+	font-size: 18px;
+	width: 400px;
 }
 
 @keyframes scaleIn {
@@ -117,7 +122,7 @@ nav {
 	top: 8px;
 	position: relative;
 	background-color: #06D6A0;
-	color: #27244E;
+	color: #333A64;
 	margin-bottom:40px;
 	padding: 14px 24px;
 	margin: 0px 100px;
