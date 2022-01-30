@@ -1,4 +1,5 @@
 import api from '../apiBase';
+import * as yup from 'yup';
 import validateStatus from '../validateStatus';
 
 export interface GetMapProps {
@@ -7,14 +8,25 @@ export interface GetMapProps {
   spaceId: string;
 }
 
-export const handleGetMap = ({ apiKey, mapId, spaceId }: GetMapProps) => {
-  // TODO: Catch nullish value for params
-  const formattedSpaceID = spaceId.replace(/\//gi, '\\');
-  const _spaceId = '?spaceId=' + formattedSpaceID;
-  const _mapId = '&mapId=' + mapId;
-  const _apiKey = '&apiKey=' + apiKey;
+const getMapSchema = yup.object({
+  apiKey: yup.string().required().trim(),
+  mapId: yup.string().required().trim(),
+  spaceId: yup.string().required().trim(),
+});
 
-  return api.get(`getMap${_spaceId}${_mapId}${_apiKey}`, {
-    validateStatus,
-  });
+export const handleGetMap = async (props: GetMapProps) => {
+  try {
+    const { apiKey, mapId, spaceId } = await getMapSchema.validate(props);
+    const formattedSpaceID = spaceId.replace(/\//gi, '\\');
+    const _spaceId = '?spaceId=' + formattedSpaceID;
+    const _mapId = '&mapId=' + mapId;
+    const _apiKey = '&apiKey=' + apiKey;
+
+    return api.get(`getMap${_spaceId}${_mapId}${_apiKey}`, {
+      validateStatus,
+    });
+  } catch (err) {
+    const error: any = err;
+    throw new Error(error.message);
+  }
 };

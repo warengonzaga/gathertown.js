@@ -9,7 +9,7 @@ describe('createSpace', () => {
         name: 'sample space name',
       });
     } catch (err: any) {
-      expect(err.message).toEqual('You must provide either a map or a sourceSpace');
+      expect(err.message).toEqual('apiKey is a required field');
     }
   });
 });

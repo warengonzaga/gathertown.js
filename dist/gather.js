@@ -1,3 +1,4 @@
+var $1ZQrD$yup = require('yup');
 var $1ZQrD$axios = require('axios');
 
 function $parcel$defineInteropFlag(a) {
@@ -36,94 +37,149 @@ function $c3c601e37dbdfe9e$export$2e2bcd8739ae039(status) {
   return status >= 200 && status < 300;
 }
 
-const $9b677507fb2ea3ca$export$481725944cb98aa3 = ({
-  apiKey: apiKey,
-  name: name,
-  map: map,
-  reason: reason,
-  sourceSpace: sourceSpace,
-}) => {
-  // Required params
-  const data = {
-    apiKey: apiKey,
-    name: name,
-  };
-  // Optional params based on API Docs, sourceSpace is optional if map is provided and map is optional when sourceSpace is provided
-  if (sourceSpace) {
-    const formattedSpaceID = sourceSpace.replace(/\//gi, '\\');
-    data.sourceSpace = formattedSpaceID;
-  } else if (!map) throw new Error('You must provide either a map or a sourceSpace');
-  else data.map = map;
-  // Optional param
-  if (reason) data.reason = reason;
-  return $ddb7129aa96814bd$export$2e2bcd8739ae039.post('createRoom', data, {
-    validateStatus: $c3c601e37dbdfe9e$export$2e2bcd8739ae039,
-  });
+const $9b677507fb2ea3ca$var$createSpaceSchema = $1ZQrD$yup.object({
+  apiKey: $1ZQrD$yup.string().required().trim(),
+  name: $1ZQrD$yup.string().required().trim(),
+  map: $1ZQrD$yup.string().trim(),
+  reason: $1ZQrD$yup.string().trim(),
+  sourceSpace: $1ZQrD$yup.string().trim(),
+});
+const $9b677507fb2ea3ca$export$481725944cb98aa3 = async (props) => {
+  try {
+    const {
+      apiKey: apiKey,
+      map: map,
+      name: name,
+      reason: reason,
+      sourceSpace: sourceSpace,
+    } = await $9b677507fb2ea3ca$var$createSpaceSchema.validate(props);
+    const data = {
+      apiKey: apiKey,
+      name: name,
+    };
+    // Optional params based on API Docs, sourceSpace is optional if map is provided and map is optional when sourceSpace is provided
+    if (sourceSpace) {
+      const formattedSpaceID = sourceSpace.replace(/\//gi, '\\');
+      data.sourceSpace = formattedSpaceID;
+    } else if (!map) throw new Error('You must provide either a map or a sourceSpace');
+    else data.map = map;
+    // Optional param
+    if (reason) data.reason = reason;
+    return $ddb7129aa96814bd$export$2e2bcd8739ae039.post('createRoom', data, {
+      validateStatus: $c3c601e37dbdfe9e$export$2e2bcd8739ae039,
+    });
+  } catch (err) {
+    const error = err;
+    throw new Error(error.message);
+  }
 };
 
-const $67e6e03ffe0f38ac$export$95d70fc673ee2b6c = ({ apiKey: apiKey, spaceId: spaceId }) => {
-  // TODO: Catch nullish value for params
-  const formattedSpaceID = spaceId.replace(/\//gi, '\\');
-  const _spaceId = '?spaceId=' + formattedSpaceID;
-  const _apiKey = '&apiKey=' + apiKey;
-  return $ddb7129aa96814bd$export$2e2bcd8739ae039.get(`getEmailGuestlist${_spaceId}${_apiKey}`, {
-    validateStatus: $c3c601e37dbdfe9e$export$2e2bcd8739ae039,
-  });
+const $67e6e03ffe0f38ac$var$getEmailGuestListSchema = $1ZQrD$yup.object({
+  apiKey: $1ZQrD$yup.string().required().trim(),
+  spaceId: $1ZQrD$yup.string().required().trim(),
+});
+const $67e6e03ffe0f38ac$export$95d70fc673ee2b6c = async (props) => {
+  try {
+    const { apiKey: apiKey, spaceId: spaceId } =
+      await $67e6e03ffe0f38ac$var$getEmailGuestListSchema.validate(props);
+    const formattedSpaceID = spaceId.replace(/\//gi, '\\');
+    const _spaceId = '?spaceId=' + formattedSpaceID;
+    const _apiKey = '&apiKey=' + apiKey;
+    return $ddb7129aa96814bd$export$2e2bcd8739ae039.get(`getEmailGuestlist${_spaceId}${_apiKey}`, {
+      validateStatus: $c3c601e37dbdfe9e$export$2e2bcd8739ae039,
+    });
+  } catch (err) {
+    const error = err;
+    throw new Error(error.message);
+  }
 };
 
-const $1e61c72e998b419b$export$f292afb1e783364c = ({
-  apiKey: apiKey,
-  mapId: mapId,
-  spaceId: spaceId,
-}) => {
-  // TODO: Catch nullish value for params
-  const formattedSpaceID = spaceId.replace(/\//gi, '\\');
-  const _spaceId = '?spaceId=' + formattedSpaceID;
-  const _mapId = '&mapId=' + mapId;
-  const _apiKey = '&apiKey=' + apiKey;
-  return $ddb7129aa96814bd$export$2e2bcd8739ae039.get(`getMap${_spaceId}${_mapId}${_apiKey}`, {
-    validateStatus: $c3c601e37dbdfe9e$export$2e2bcd8739ae039,
-  });
+const $1e61c72e998b419b$var$getMapSchema = $1ZQrD$yup.object({
+  apiKey: $1ZQrD$yup.string().required().trim(),
+  mapId: $1ZQrD$yup.string().required().trim(),
+  spaceId: $1ZQrD$yup.string().required().trim(),
+});
+const $1e61c72e998b419b$export$f292afb1e783364c = async (props) => {
+  try {
+    const {
+      apiKey: apiKey,
+      mapId: mapId,
+      spaceId: spaceId,
+    } = await $1e61c72e998b419b$var$getMapSchema.validate(props);
+    const formattedSpaceID = spaceId.replace(/\//gi, '\\');
+    const _spaceId = '?spaceId=' + formattedSpaceID;
+    const _mapId = '&mapId=' + mapId;
+    const _apiKey = '&apiKey=' + apiKey;
+    return $ddb7129aa96814bd$export$2e2bcd8739ae039.get(`getMap${_spaceId}${_mapId}${_apiKey}`, {
+      validateStatus: $c3c601e37dbdfe9e$export$2e2bcd8739ae039,
+    });
+  } catch (err) {
+    const error = err;
+    throw new Error(error.message);
+  }
 };
 
-const $47f2afa106c5c247$export$7119370e1336d485 = ({
-  apiKey: apiKey,
-  spaceId: spaceId,
-  guestlist: guestlist,
-  overwrite: overwrite = false,
-}) => {
-  const formattedSpaceID = spaceId.replace(/\//gi, '\\');
-  const data = JSON.stringify({
-    apiKey: apiKey,
-    spaceId: formattedSpaceID,
-    guestlist: guestlist,
-    overwrite: overwrite,
-  });
-  return $ddb7129aa96814bd$export$2e2bcd8739ae039.post('setEmailGuestlist', data, {
-    validateStatus: $c3c601e37dbdfe9e$export$2e2bcd8739ae039,
-  });
-};
-
-const $b594183b739d3bf6$export$3038311898482a66 = ({
-  apiKey: apiKey,
-  mapContent: mapContent,
-  mapId: mapId,
-  spaceId: spaceId,
-}) => {
-  // Required params
-  const formattedSpaceID = spaceId.replace(/\//gi, '\\');
-  return $ddb7129aa96814bd$export$2e2bcd8739ae039.post(
-    'setMap',
-    {
+const $47f2afa106c5c247$var$setEmailGuestListSchema = $1ZQrD$yup.object({
+  apiKey: $1ZQrD$yup.string().required().trim(),
+  spaceId: $1ZQrD$yup.string().required().trim(),
+  guestlist: $1ZQrD$yup.object().required(),
+  overwrite: $1ZQrD$yup.boolean().default(false),
+});
+const $47f2afa106c5c247$export$7119370e1336d485 = async (props) => {
+  try {
+    const {
+      apiKey: apiKey,
+      guestlist: guestlist,
+      overwrite: overwrite,
+      spaceId: spaceId,
+    } = await $47f2afa106c5c247$var$setEmailGuestListSchema.validate(props);
+    const formattedSpaceID = spaceId.replace(/\//gi, '\\');
+    const data = JSON.stringify({
       apiKey: apiKey,
       spaceId: formattedSpaceID,
-      mapId: mapId,
-      mapContent: mapContent,
-    },
-    {
+      guestlist: guestlist,
+      overwrite: overwrite,
+    });
+    return $ddb7129aa96814bd$export$2e2bcd8739ae039.post('setEmailGuestlist', data, {
       validateStatus: $c3c601e37dbdfe9e$export$2e2bcd8739ae039,
-    }
-  );
+    });
+  } catch (err) {
+    const error = err;
+    throw new Error(error.message);
+  }
+};
+
+const $b594183b739d3bf6$var$setMapSchema = $1ZQrD$yup.object({
+  apiKey: $1ZQrD$yup.string().required().trim(),
+  mapId: $1ZQrD$yup.string().required().trim(),
+  spaceId: $1ZQrD$yup.string().required().trim(),
+  mapContent: $1ZQrD$yup.object().required(),
+});
+const $b594183b739d3bf6$export$3038311898482a66 = async (props) => {
+  try {
+    const {
+      apiKey: apiKey,
+      mapContent: mapContent,
+      mapId: mapId,
+      spaceId: spaceId,
+    } = await $b594183b739d3bf6$var$setMapSchema.validate(props);
+    const formattedSpaceID = spaceId.replace(/\//gi, '\\');
+    return $ddb7129aa96814bd$export$2e2bcd8739ae039.post(
+      'setMap',
+      {
+        apiKey: apiKey,
+        spaceId: formattedSpaceID,
+        mapId: mapId,
+        mapContent: mapContent,
+      },
+      {
+        validateStatus: $c3c601e37dbdfe9e$export$2e2bcd8739ae039,
+      }
+    );
+  } catch (err) {
+    const error = err;
+    throw new Error(error.message);
+  }
 };
 
 function $b03e17997ed23475$var$Gather(initialApiKey) {

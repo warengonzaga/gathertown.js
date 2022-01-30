@@ -34,7 +34,8 @@
   },
   "homepage": "https://github.com/warengonzaga/gather.js#readme",
   "dependencies": {
-    "axios": "^0.24.0"
+    "axios": "^0.24.0",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@parcel/packager-ts": "^2.0.1",
