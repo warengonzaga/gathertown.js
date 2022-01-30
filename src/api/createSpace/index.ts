@@ -22,8 +22,6 @@ const createSpaceSchema = yup.object({
 export const handleCreateSpace = async (props: CreateSpaceProps) => {
   try {
     const { apiKey, map, name, reason, sourceSpace } = await createSpaceSchema.validate(props);
-
-    // Required params
     const data: CreateSpaceProps = {
       apiKey,
       name,

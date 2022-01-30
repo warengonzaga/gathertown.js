@@ -53,7 +53,6 @@ const $9b677507fb2ea3ca$export$481725944cb98aa3 = async (props) => {
       reason: reason,
       sourceSpace: sourceSpace,
     } = await $9b677507fb2ea3ca$var$createSpaceSchema.validate(props);
-    // Required params
     const data = {
       apiKey: apiKey,
       name: name,

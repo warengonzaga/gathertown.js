@@ -17,7 +17,6 @@ const getMapSchema = yup.object({
 export const handleGetMap = async (props: GetMapProps) => {
   try {
     const { apiKey, mapId, spaceId } = await getMapSchema.validate(props);
-
     const formattedSpaceID = spaceId.replace(/\//gi, '\\');
     const _spaceId = '?spaceId=' + formattedSpaceID;
     const _mapId = '&mapId=' + mapId;

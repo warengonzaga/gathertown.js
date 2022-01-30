@@ -16,7 +16,6 @@ const getEmailGuestListSchema = yup.object({
 export const handleGetEmailGuestlist = async (props: GetEmailGuestlistProps) => {
   try {
     const { apiKey, spaceId } = await getEmailGuestListSchema.validate(props);
-
     const formattedSpaceID = spaceId.replace(/\//gi, '\\');
     const _spaceId = '?spaceId=' + formattedSpaceID;
     const _apiKey = '&apiKey=' + apiKey;

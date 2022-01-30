@@ -20,9 +20,7 @@ const setEmailGuestListSchema = yup.object({
 export const handleSetEmailGuestlist = async (props: SetEmailGuestlistProps) => {
   try {
     const { apiKey, guestlist, overwrite, spaceId } = await setEmailGuestListSchema.validate(props);
-
     const formattedSpaceID = spaceId.replace(/\//gi, '\\');
-
     const data = JSON.stringify({
       apiKey,
       spaceId: formattedSpaceID,
