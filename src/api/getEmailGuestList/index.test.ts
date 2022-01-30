@@ -9,7 +9,7 @@ describe('getEmailGuestlist', () => {
         spaceId: '',
       });
     } catch (err: any) {
-      expect(err.message).toEqual('Request failed with status code 403');
+      expect(err.message).toEqual('apiKey is a required field');
     }
   });
 });

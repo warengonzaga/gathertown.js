@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1639067708304" clover="3.2.0">
-  <project timestamp="1639067708305" name="All files">
-    <metrics statements="37" coveredstatements="31" conditionals="7" coveredconditionals="4" methods="4" coveredmethods="4" elements="48" coveredelements="39" complexity="0" loc="37" ncloc="37" packages="6" files="6" classes="6"/>
+<coverage generated="1643548031106" clover="3.2.0">
+  <project timestamp="1643548031106" name="All files">
+    <metrics statements="43" coveredstatements="33" conditionals="7" coveredconditionals="2" methods="4" coveredmethods="4" elements="54" coveredelements="39" complexity="0" loc="43" ncloc="43" packages="6" files="6" classes="6"/>
     <package name="src">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="config.ts" path="C:\Users\prince.juguilon\Documents\Work\codes\github\forks\gathertown.js\src\config.ts">
@@ -22,22 +22,28 @@
       </file>
     </package>
     <package name="src.api.createSpace">
-      <metrics statements="13" coveredstatements="7" conditionals="5" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <metrics statements="19" coveredstatements="9" conditionals="5" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.ts" path="C:\Users\prince.juguilon\Documents\Work\codes\github\forks\gathertown.js\src\api\createSpace\index.ts">
-        <metrics statements="13" coveredstatements="7" conditionals="5" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <metrics statements="19" coveredstatements="9" conditionals="5" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="21" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="25" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
-        <line num="31" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="34" count="0" type="stmt"/>
         <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="43" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.api.getEmailGuestList">

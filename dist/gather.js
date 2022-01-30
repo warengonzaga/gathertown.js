@@ -1,3 +1,4 @@
+var $1ZQrD$yup = require('yup');
 var $1ZQrD$axios = require('axios');
 
 function $parcel$defineInteropFlag(a) {
@@ -36,29 +37,42 @@ function $c3c601e37dbdfe9e$export$2e2bcd8739ae039(status) {
   return status >= 200 && status < 300;
 }
 
-const $9b677507fb2ea3ca$export$481725944cb98aa3 = ({
-  apiKey: apiKey,
-  name: name,
-  map: map,
-  reason: reason,
-  sourceSpace: sourceSpace,
-}) => {
-  // Required params
-  const data = {
-    apiKey: apiKey,
-    name: name,
-  };
-  // Optional params based on API Docs, sourceSpace is optional if map is provided and map is optional when sourceSpace is provided
-  if (sourceSpace) {
-    const formattedSpaceID = sourceSpace.replace(/\//gi, '\\');
-    data.sourceSpace = formattedSpaceID;
-  } else if (!map) throw new Error('You must provide either a map or a sourceSpace');
-  else data.map = map;
-  // Optional param
-  if (reason) data.reason = reason;
-  return $ddb7129aa96814bd$export$2e2bcd8739ae039.post('createRoom', data, {
-    validateStatus: $c3c601e37dbdfe9e$export$2e2bcd8739ae039,
-  });
+const $9b677507fb2ea3ca$var$createSpaceSchema = $1ZQrD$yup.object({
+  apiKey: $1ZQrD$yup.string().required().trim(),
+  name: $1ZQrD$yup.string().required().trim(),
+  map: $1ZQrD$yup.string().trim(),
+  reason: $1ZQrD$yup.string().trim(),
+  sourceSpace: $1ZQrD$yup.string().trim(),
+});
+const $9b677507fb2ea3ca$export$481725944cb98aa3 = async (props) => {
+  try {
+    const {
+      apiKey: apiKey,
+      map: map,
+      name: name,
+      reason: reason,
+      sourceSpace: sourceSpace,
+    } = await $9b677507fb2ea3ca$var$createSpaceSchema.validate(props);
+    // Required params
+    const data = {
+      apiKey: apiKey,
+      name: name,
+    };
+    // Optional params based on API Docs, sourceSpace is optional if map is provided and map is optional when sourceSpace is provided
+    if (sourceSpace) {
+      const formattedSpaceID = sourceSpace.replace(/\//gi, '\\');
+      data.sourceSpace = formattedSpaceID;
+    } else if (!map) throw new Error('You must provide either a map or a sourceSpace');
+    else data.map = map;
+    // Optional param
+    if (reason) data.reason = reason;
+    return $ddb7129aa96814bd$export$2e2bcd8739ae039.post('createRoom', data, {
+      validateStatus: $c3c601e37dbdfe9e$export$2e2bcd8739ae039,
+    });
+  } catch (err) {
+    const error = err;
+    throw new Error(error.message);
+  }
 };
 
 const $67e6e03ffe0f38ac$export$95d70fc673ee2b6c = ({ apiKey: apiKey, spaceId: spaceId }) => {
