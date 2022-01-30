@@ -11,6 +11,7 @@ node_modules
 
 # misc
 *.js
+!jest.config.js
 !src/*.js
 !dist/*.js
 *.http
