@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1643548031106" clover="3.2.0">
-  <project timestamp="1643548031106" name="All files">
-    <metrics statements="43" coveredstatements="33" conditionals="7" coveredconditionals="2" methods="4" coveredmethods="4" elements="54" coveredelements="39" complexity="0" loc="43" ncloc="43" packages="6" files="6" classes="6"/>
+<coverage generated="1643548410100" clover="3.2.0">
+  <project timestamp="1643548410100" name="All files">
+    <metrics statements="49" coveredstatements="35" conditionals="7" coveredconditionals="2" methods="4" coveredmethods="4" elements="60" coveredelements="41" complexity="0" loc="49" ncloc="49" packages="6" files="6" classes="6"/>
     <package name="src">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="config.ts" path="C:\Users\prince.juguilon\Documents\Work\codes\github\forks\gathertown.js\src\config.ts">
@@ -47,16 +47,22 @@
       </file>
     </package>
     <package name="src.api.getEmailGuestList">
-      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="13" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.ts" path="C:\Users\prince.juguilon\Documents\Work\codes\github\forks\gathertown.js\src\api\getEmailGuestList\index.ts">
-        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="13" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.api.getMap">
@@ -78,7 +84,7 @@
       <file name="index.ts" path="C:\Users\prince.juguilon\Documents\Work\codes\github\forks\gathertown.js\src\api\validateStatus\index.ts">
         <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="4" type="stmt"/>
-        <line num="2" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="5" type="cond" truecount="2" falsecount="0"/>
       </file>
     </package>
   </project>
