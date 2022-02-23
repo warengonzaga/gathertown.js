@@ -110,6 +110,8 @@ GatherTownJS is licensed under [The MIT License](https://opensource.org/licenses
 
 GatherTownJS is created by **[Waren Gonzaga](https://github.com/warengonzaga)**, with the help of awesome [contributors](https://github.com/warengonzaga/gathertown.js/graphs/contributors).
 
+[![contributors](https://contrib.rocks/image?repo=warengonzaga/gathertown.js)](https://github.com/warengonzaga/gathertown.js/graphs/contributors)
+
 ---
 
 💻💖☕ by [Waren Gonzaga](https://warengonzaga.com) | [YHWH](https://youtu.be/9vh6Dz9oh8I?t=85) 🙏
