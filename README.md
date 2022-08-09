@@ -93,10 +93,10 @@ If you're facing a problem in using GatherTownJS please let me know by [creating
 
 ## 🍀 Sponsors and Supporters
 
-> Love what I do? **[Send me some coffees](https://buymeacoff.ee/wareneutron)**! ☕☕☕
+> Love what I do? Send me some [love](https://github.com/sponsors/warengonzaga) or [coffee](https://buymeacoff.ee/warengonzaga)!? 💖☕
 >
-> Can't send coffees? 😥 Nominate me for a **[GitHub Star](https://stars.github.com/nominate)** instead!
-> Your coffee donation and support will help me to continue working on open-source projects like this. 🙏😇
+> Can't send love or coffees? 😥 Nominate me for a **[GitHub Star](https://stars.github.com/nominate)** instead!
+> Your support will help me to continue working on open-source projects like this. 🙏😇
 
 ## 📋 Code of Conduct
 
