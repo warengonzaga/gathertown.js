@@ -13,7 +13,7 @@ interface IGather {
   setEmailGuestlist(props: Omit<SetEmailGuestlistProps, 'apiKey'>): Promise<IGuest>;
 }
 
-function Gather(initialApiKey: string): IGather {
+export function Gather(initialApiKey: string): IGather {
   const createSpace: IGather['createSpace'] = async ({ name, map, reason, sourceSpace }) => {
     const res = await handleCreateSpace({
       apiKey: initialApiKey,

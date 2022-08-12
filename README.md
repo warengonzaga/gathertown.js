@@ -37,7 +37,7 @@ The complete documentation can be found here:
 Example usage of the GatherTownJS.
 
 ```js
-const GATHER = require('gathertown.js'); // add gather package
+const { Gather } = require('gathertown.js'); // add gather package
 const access = require('./config.json'); // load your apikey
 const gather = GATHER(access.key); // access keys
 
