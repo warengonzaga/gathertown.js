@@ -1,16 +1,10 @@
-# GatherTownJS [![Featured on Openbase](https://badges.openbase.com/js/featured/gathertown.js.svg?style=openbase)](https://openbase.com/js/gathertown.js?utm_source=embedded&amp;utm_medium=badge&amp;utm_campaign=rate-badge) [![huntr](https://cdn.huntr.dev/huntr_security_badge_mono.svg)](https://huntr.dev)
+# GatherTownJS [![Featured on Openbase](https://badges.openbase.com/js/featured/gathertown.js.svg?style=openbase&token=vTEljlezFJGmGx90+kIOLt4Sb/Ewj4Tc+3vzCpsIfaE=)](https://openbase.com/js/gathertown.js?utm_source=embedded&amp;utm_medium=badge&amp;utm_campaign=rate-badge)
 
 [![created by](https://img.shields.io/badge/created%20by-Waren%20Gonzaga-blue.svg?longCache=true&style=flat-square)](https://github.com/warengonzaga) [![release](https://img.shields.io/github/release/warengonzaga/gathertown.js.svg?style=flat-square)](https://github.com/warengonzaga/gathertown.js/releases) [![star](https://img.shields.io/github/stars/warengonzaga/gathertown.js.svg?style=flat-square)](https://github.com/warengonzaga/gathertown.js/stargazers) ![npm downloads](https://img.shields.io/npm/dt/gathertown.js?color=red&style=flat-square) [![license](https://img.shields.io/github/license/warengonzaga/gathertown.js.svg?style=flat-square)](https://github.com/warengonzaga/gathertown.js/blob/main/license)
-
-📢 Nominate ([@warengonzaga](https://warengonzaga.com)) as **[GitHub Star](https://stars.github.com/nominate)**. If you appreciate his hardwork and dedication to open source.
 
 [![repo banner](.github/img/repo_banner.png)](https://gathertown.js.org)
 
 A simple and lightweight but powerful NodeJS client for [Gather Town](http://gather.town) API.
-
-## 😎 Demo
-
-(coming soon)
 
 ## ⚡ Features
 
