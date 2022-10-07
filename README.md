@@ -4,7 +4,7 @@
 
 [![repo banner](.github/img/repo_banner.png)](https://gathertown.js.org)
 
-A simple and lightweight but powerful NodeJS client for [Gather Town](http://gather.town) API.
+Simple and lightweight **community contributed unofficial JavaScript/Typescript SDK** for [Gather Town](http://gather.town)'s HTTPS and WebSocket APIs. 🌏🕹💬
 
 ## ⚡ Features
 
